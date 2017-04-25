@@ -1,37 +1,64 @@
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" charset="utf-8">
 		<meta name="author" content="Hamza Caner CANBAZ">
 		<title>Contact Me</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+          <link href="css/styles.css" rel="stylesheet"> 
 	</head>
       <body>
-      	<div style="text-align: center;">
-    	  	<nav>
-            	<a href="index.html">[Registration]</a>
-            	<a href="personalinfo.html">[Personal Information]</a>
-            	<a href="photoGallery.html">[Photo Gallery]</a>
-            	<a href="family.html">[Family]</a>
-            	<a href="hometown.html">[Hometown]</a>
-            	<a href="hobbies.html">[My Hobbies]</a>
-            	<a href="socialmedia.html">[Social Media]</a>
-            	<a href="contactme.html">[Contact Me]</a>   
-    	  	</nav>
-        </div>    <hr>
+      <div class="container-fluid" style="text-align: center;">
+        <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false"><img src=img/menuicon/menu.jpg  alt="menu" width=100px ></button>
+        </div> 
+      <div class="collapse navbar-collapse" id="main_navbar">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Registration</a></li>
+            <li><a href="personalinfo.html">Personal Information</a></li>
+            <li><a href="photoGallery.html">Photo Gallery</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="hometown.html">Hometown</a></li>
+            <li><a href="hobbies.html">My Hobbies</a></li>
+            <li><a href="socialmedia.html">Social Media</a></li>
+            <li class="active"><a href="contactme.html">Contact Me</a> </li>  
+            </ul>
+        </nav>
+        </div>
+        </div>
+        <hr>
+        <div class="container">
 	<h1>Here is my contact links</h1>
 	<p>
 		<h3>Whatsapp/SMS/Calling : +90538731133
 		<br>E-mail : hamza_caner_canbaz@hotmail.com</h3></br>
 		<label for="email">Your Name: </label>
-        <input type="text" id="name" ><br>
-        <label for="email">Your E-mail:</label>
-        <input type="email" id="email" name="email"><br>
+        <input type="text" class="form-control" placeholder="Name&Surname" id="name" ><br>
+        <label for="email">E-Mail: </label>
+        <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+  </div>
 	</p>
 	<form action="test.php" method="GET">
 
-	        <p>Please enter your message:</p>
-	        <textarea rows="3" cols="60" name="feedback" >
-	        </textarea>
+	        <label for="opinion"><b>Please enter your message:</b><br></label>
+			<textarea class="form-control" id="opinion" row="4" cols="50" placeholder="You can enter your opinions here"></textarea>
 	        <br>
 	        
-	        <input type="submit" value="Send">
-		</form>	
+	        <input type="submit" class="btn btn-success" value="Send">
+		</form>
+		<div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Registration</a></li>
+        <li><a href="personalinfo.html">Personal Information</a></li>
+        <li><a href="photoGallery.html">Photo Gallery</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="hometown.html">Hometown</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="socialmedia.html">Social Media</a></li>
+        <li><a href="contactme.html">Contact Me</a></li>
+      </ol>
+      
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>	

@@ -1,29 +1,40 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" charset="utf-8">
 		<meta name="author" content="Hamza Caner CANBAZ">
 		<title>Registration</title>
+		<link href="css/bootstrap.css" rel="stylesheet"> 
+		<link href="css/styles.css" rel="stylesheet">
 	</head>
       <body>
-      <div style="text-align: center;">
-    	  <nav>
-            <a href="index.html">[Registration]</a>
-            <a href="personalinfo.html">[Personal Information]</a>
-            <a href="photoGallery.html">[Photo Gallery]</a>
-            <a href="family.html">[Family]</a>
-            <a href="hometown.html">[Hometown]</a>
-            <a href="hobbies.html">[My Hobbies]</a>
-            <a href="socialmedia.html">[Social Media]</a>
-            <a href="contactme.html">[Contact Me]</a>   
+      <div class="container-fluid" style="text-align: center;">
+    	  <nav class="navbar navbar-default">
+    	  <div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false"><img src=img/menuicon/menu.jpg  alt="menu" width=100px ></button>
+    	  </div> 
+		  <div class="collapse navbar-collapse" id="main_navbar">
+    	  <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Registration</a></li>
+            <li><a href="personalinfo.html">Personal Information</a></li>
+            <li><a href="photoGallery.html">Photo Gallery</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="hometown.html">Hometown</a></li>
+            <li><a href="hobbies.html">My Hobbies</a></li>
+            <li><a href="socialmedia.html">Social Media</a></li>
+            <li><a href="contactme.html">Contact Me</a> </li>  
+            </ul>
     	  </nav>
+          </div>
         </div>
     <hr>
+    <div class="container">
+    </div>
 		<form>
 		<fieldset>
 		<fieldset>
-		<legend><h3>Personal Information</h3></legend>
-			<img src=img/registration/photo1.jpg alt="photo1" width=150px border=2px><br>
+		<div class="container"><legend><h3>Personal Information</h3></legend>
+			<img src=img/registration/photo1.jpg alt="photo1" style="width:12%;height:20%;"><br>
 			<label for="file"><b>Upload a file: </b></label>
 			<input type="file" name="fileToUpload"><br>
 			<label for="gender"><b>Gender:</b></label>
@@ -31,15 +42,18 @@
 			<input type="radio" name="gender" value="female" >Female
 			<input type="radio" name="gender" value="other" > Other<br>
 			<label for="name"><b>First Name:</b> </label>
-			<input type="text" id="name"><br>
+			<input type="text" class="form-control" placeholder="Name" id="name"><br>
 			<label for="name"><b>Middle Name:</b> </label>
-			<input type="text" id="name"><br>
+			<input type="text" class="form-control" placeholder="Middle Name" id="name"><br>
 			<label for="name"><b>Last Name:</b> </label>
-			<input type="text" id="name"><br>
+			<input type="text" class="form-control" placeholder="Surname" id="name"><br>
 			<label for="dateofbirth"><b>Date of Birthday:</b></label>
-			<input type="date" name="dateofbirth"><br>
+			<div class="input-group date" data-provide="datepicker">
+				<input type="date" name="dateofbirth" class="form-control"><br>
+				<div class="input-group-addon">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div></div>
 			<label for="city"><b>City:</b></label>
-			<select name="cities">
+			<select class="form-control" name="cities">
 			<option value="Adana">Adana</option>
 			<option value="Adıyaman">Adıyaman</option>
 			<option value="Afyon">Afyon</option>
@@ -123,29 +137,62 @@
 			<option value="Düzce">Düzce</option>
 			</select><br>
 			<label for="opinion"><b>About Me:</b><br></label>
-			<textarea id="opinion" row="4" cols="50" placeholder="You can enter your opinions here"></textarea>
+			<textarea class="form-control" id="opinion" row="4" cols="50" placeholder="You can enter your opinions here"></textarea>
 		</fieldset><br>	
 		<fieldset>
-		<legend><h3>Interest</h3></legend>
+		<div class="container"><legend><h3>Interest</h3></legend>
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Sports
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Cooking
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Arts
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Collecting
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Travel
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Gardening
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Photography
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Music
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Fishing
+		<label class="checkbox-inline">
 		<input type="checkbox" name="interest" > Other
 		</fieldset><br>
-		<fieldset><legend><h3>Account Information</h3></legend>
-			<label for="email"><b>E-Mail:</b> </label>
-			<input type="email" id="email"><br>
-			<label for="password"><b>Password</b> </label>
-			<input type="password" id="passwrod"><br>
+		<div class="container"><fieldset><legend><h3>Account Information</h3></legend>
+			<div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+  </div><br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
 		</fieldset><br>
-		<input type="submit" onclick="alert('Thank You :)')">
+		<input type="submit" class="btn btn-success" onclick="alert('Thank You :)')">
 		</fieldset>
 		</form>
+		</div>
+		</div>
+		</div>
+		<div class="container">
+		 
+      <ol class="breadcrumb">
+        <li><a href="index.html">Registration</a></li>
+        <li><a href="personalinfo.html">Personal Information</a></li>
+        <li><a href="photoGallery.html">Photo Gallery</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="hometown.html">Hometown</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="socialmedia.html">Social Media</a></li>
+        <li><a href="contactme.html">Contact Me</a></li>
+      </ol>
+      
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+
 	</body>
 </html>
